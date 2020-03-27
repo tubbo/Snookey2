@@ -14,6 +14,8 @@ Contact me at Drift#5339 for help or contact our Reddit usernames!
 
 Thank you for downloading Snookey!
 
+[Original Snookey by u/Spikeedoo is here.](https://github.com/Spikeedoo/SnooKey)   
+
 The text and stuff below was originally made by u/Spikeedoo:
 
 # SnooKey
