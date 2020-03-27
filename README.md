@@ -15,10 +15,10 @@ Contact me at Drift#5339 for help or contact our Reddit usernames!
 Thank you for downloading Snookey!
 
 Added:
-- More text in general\n
-- More descriptive and better looking text\n
-- Auto closes when getting a stream spot is successful after 1 minute\n
-- Retries every 2 seconds if requesting a stream spot fails with error message\n
+- More text in general
+- More descriptive and better looking text
+- Auto closes when getting a stream spot is successful after 1 minute
+- Retries every 2 seconds if requesting a stream spot fails with error message
 
 [Original Snookey by u/Spikeedoo is here.](https://github.com/Spikeedoo/SnooKey)   
 
