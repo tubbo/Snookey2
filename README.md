@@ -23,7 +23,7 @@ Added:
 
 [Original Snookey by u/Spikeedoo is here.](https://github.com/Spikeedoo/SnooKey)   
 
-The text and stuff below was originally made by u/Spikeedoo:
+The text and stuff below was originally made by u/Spikeedoo (with some modifications from me):
 
 # SnooKey
 Some reddit users figured out a way to stream to RPAN (Reddit's livestreaming platform) from desktop streaming software 
@@ -31,8 +31,7 @@ Some reddit users figured out a way to stream to RPAN (Reddit's livestreaming pl
 
 ## START HERE
 ### Method 1 (Windows only)
-If you have a windows machine, you can run SnooKey without installing python by simply cloning the repository
-(see 'Installation' section) and running ```snookey.exe```
+If you have a Windows machine, you can run SnooKey without installing python by simply going into the Releases tab and downloading the latest version, unzipping the zip file, and running Snookey.
 
 ### Method 2 (All platforms)
 For this to work you will need Python3 installed to your system.      
@@ -46,22 +45,15 @@ pip install requests
 ```
 
 ## Installation
-Download the zip file by pressing the green 'Clone or download' button and selecting 'Download ZIP'   
+Clicking the Releases tab and downloading the latest version   
 **OR**    
-Clone the repository with:
-```
-git clone https://github.com/Spikeedoo/SnooKey.git
-```
-Navigate to the repository:
-```
-cd SnooKey
-```
+Download the zip file by pressing the green 'Clone or download' button and selecting 'Download ZIP'
 
 ## Using SnooKey
 Once you have SnooKey downloaded, it is time to run the script.     
-(**If you used method #1 simply run ```snookey.exe```**)
+(**If you have a Windows computer (Method #1) simply run ```snookey2_v(version number).exe```**)
 ```
-python snookey.py
+python snookey2.py
 ```
 This will open a link in your browser allowing you to get an access code from Reddit    
 **NOTE:** The Reddit app you are allowing access is not mine.  It is the client_id for the mobile, in this case android, Reddit app.    
