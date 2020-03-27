@@ -54,7 +54,12 @@ while True:
     # Failed
     print("")
     print("Stream failed to connect! Trying again in 2 seconds...")
-    print("Error message: " + token_req.json()["status"])
+    try:
+      print("Error message: " + token_req.json()["status"])
+    except:
+      print("Error message: Invalid subreddit/access code/broadcast title.\nPlease restart the program and try again.\nThis program will automatically close in 10 seconds.")
+      time.sleep(10)
+      sys.exit()
     time.sleep(2)
 
 # Fix to prevent windows .exe from closing on completion
