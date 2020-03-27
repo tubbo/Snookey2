@@ -58,9 +58,7 @@ This will open a link in your browser allowing you to get an access code from Re
 **NOTE:** The Reddit app you are allowing access is not mine.  It is the client_id for the mobile, in this case android, Reddit app.    
 One way you can confirm that I am not BS'ing you is by looking at [your apps](https://www.reddit.com/prefs/apps/) after allowing access.
 A third party application would normally appear here in the 'authorized applications' section with the developer's username.  This Reddit-built
-application does not follow the same rules.
-
-![snookey01](examples/snookey01.PNG)    
+application does not follow the same rules.   
 
 Copy the access token from the localhost callback url and reply to the prompt in your terminal:
 ```
@@ -74,15 +72,12 @@ Stream title: <i.e. RPAN and chill!>
 If all goes well you will be given your streamer key and the rpan link people will visit your stream from.
 
 ## How to use your streamer key
-Step 1: Open up your desktop streaming software (in my example, OBS)    
-![snookey02](examples/snookey02.PNG)    
-Step 2: Navigate to your stream settings (Settings > Stream in OBS)   
-![snookey03](examples/snookey03.PNG)    
+Step 1: Open up your desktop streaming software (in my example, OBS)      
+Step 2: Navigate to your stream settings (Settings > Stream in OBS)    
 Step 3: Make sure your Service is set to 'Custom' and fill in the following settings:
 - Server: rtmp://ingest.redd.it/inbound/
 - Stream Key: (your stream key)
 
-![snookey04](examples/snookey04.PNG)    
 Now hit 'Apply' and 'OK'
 
 Hit 'Start Streaming' and watch the magic happen!
