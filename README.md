@@ -20,6 +20,7 @@ Added:
 - Auto closes when getting a stream spot is successful after 1 minute
 - Retries every 2 seconds if requesting a stream spot fails with error message
 - Made the icon of the app the RPAN logo!
+
 (Check the Releases tab of this repo to see the full list of changes.)
 
 [Original Snookey by u/Spikeedoo is here.](https://github.com/Spikeedoo/SnooKey)   
