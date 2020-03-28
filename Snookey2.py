@@ -1,12 +1,16 @@
 import sys
+import pytz
 import time
+import datetime
 import requests
 import webbrowser
+from pytz import timezone
 
 print("Welcome to Snookey2 v1.2 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
 print("Contact me or Spikeedoo for help! My Discord is Drift#5339.\n")
 print("Remember to follow the Reddit TOS and Broadcasting Guidelines here: https://www.redditinc.com/policies/broadcasting-content-policy\n")
 print("The app icon is the official logo to RPAN so credit to Reddit for the logo.\n")
+print("If you find any bugs or errors in Snookey2, please contact me at u/IOnlyPlayAsDrif or on Discord at Drift#5339!\n")
 
 # 'Reddit for Android' Client ID
 client_id = "ohXpoqrZYub1kg"
@@ -29,9 +33,17 @@ while True:
       print("")
       webbrowser.open("https://www.youtube.com/watch?v=Oi54fiFOoCI&t=2s", new=0)
       continue
-    if options == "reopen":
+    elif options == "reopen":
       print("")
       webbrowser.open(request_url, new=0)
+      continue
+    elif len(user_token) < 40:
+      print("")
+      print("Invalid access token.\nPlease make sure you're copy and pasting the right thing and make sure you're doing it correctly.")
+      continue
+    elif user_token[0:12].isdigit() == False:
+      print("")
+      print("Invalid access token.\nPlease make sure you're copy and pasting the right thing and make sure you're doing it correctly.")
       continue
   except:
     print("Unexpected error occured, closing program in 10 seconds...")
@@ -39,8 +51,94 @@ while True:
     sys.exit()
   else:
     break
+  
 full_token = "Bearer " + user_token
-subreddit = input("Subreddit you want to broadcast to:\n")
+
+while True:
+  try:
+    print("")
+    subreddit = input("Subreddit you want to broadcast to:\nType list in the field to get a list of the subreddits you can stream to!\n")
+    subset = subreddit.lower()
+    
+    if subset == "list":
+      print("")
+      print("Here's the list of subreddits for you:")
+      date_format='%H'
+      date = datetime.datetime.now(tz=pytz.utc)
+      date = date.astimezone(timezone('US/Pacific'))
+      
+      if datetime.datetime.utcnow().strftime("%A") == "Thursday":
+        if date.strftime(date_format) < 17:
+          print("PAN")
+        else:
+          pass
+      else:
+        pass
+      
+      print("AnimalsOnReddit")
+      print("RedditSessions")
+      print("RedditMasterClasses")
+      print("TheArtistStudio")
+      print("GlamourSchool")
+      print("TheYouShow")
+      print("RedditIntheKitchen")
+      print("whereintheworld")
+      print("TheGamerLounge")
+      print("talentShow")
+      print("distantsocializing")
+      print("\nThis list was last updated March 28, 2020.")
+      continue
+    
+    elif subset == "thegamerlounge":
+      while True:
+        try:
+          print("")
+          assure = input("This program is not meant to be used to just do random gaming streams, please use this program for things that are worth the limited spots.\nDO NOT do a boring regular gaming stream.\nIf you're going to do a gaming stream, make sure it has something interesting and fun to it.\nIf you want to do just a normal gaming stream and there's already a bunch of other people doing a normal gaming stream on RPAN, please wait until they're done so RPAN isn't flooded with gaming streams.\n\nType yes if you read the whole thing and understand.\n")
+          assset = assure.lower()
+          if assset == "yes":
+            break
+          
+        except:
+          print("Please type yes or no into the prompt.")
+          continue
+        else:
+          if assset == "no":
+            sys.exit()
+          print("Please type yes or no into the prompt.")
+          continue
+  except:
+    sys.exit()
+  if subset not in ["pan", "animalsonreddit", "redditmasterclasses", "GlamourSchool", "whereintheworld", "distantsocializing", "redditinthekitchen", "redditsessions", "talentshow", "theartiststudio", "thegamerlounge", "theyoushow"]:
+    print("")
+    subnotfound = input("The subreddit you just typed in couldn't be found in this script's database.\nType yes to move on with " + subreddit + " or type no if you made a mistake.\n")
+    snf = subnotfound.lower()
+    if snf == "yes":
+      print("")
+      break
+    if snf == "no":
+      print("")
+      continue
+    else:
+      print("")
+      print("Invalid response. Please try again.")
+      continue
+  
+  else:
+    if subset == "pan":
+      if datetime.datetime.utcnow().strftime("%A") == "Thursday":
+        break
+        if datetime.datetime.utcnow().hour < 17:
+          break
+        else:
+          print("")
+          print("RPAN is available on Wednesdays from Midnight-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
+          continue
+      else:
+        print("")
+        print("RPAN is available on Wednesdays from Midnight-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
+        continue
+    break
+  
 title = input("Stream title:\n")
 
 broadcast_endpoint = "https://strapi.reddit.com/r/%s/broadcasts?title=%s" % (subreddit, title)
