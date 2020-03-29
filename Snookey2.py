@@ -6,7 +6,7 @@ import requests
 import webbrowser
 from pytz import timezone
 
-print("Welcome to Snookey2 v1.3 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
+print("Welcome to Snookey2 v2.0 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
 print("Contact me or Spikeedoo for help! My Discord is Drift#5339.\n")
 print("Remember to follow the Reddit TOS and Broadcasting Guidelines here: https://www.redditinc.com/policies/broadcasting-content-policy\n")
 print("The app icon is the official logo to RPAN so credit to Reddit for the logo.\n")
@@ -69,24 +69,19 @@ while True:
       
       if datetime.datetime.utcnow().strftime("%A") == "Thursday":
         if date.strftime(date_format) < 17:
-          print("PAN")
+          print("PAN - The OG subreddit for all livestreams on Wednesday's from Midnight to 5PM PST!")
         else:
           pass
       else:
         pass
-      
-      print("AnimalsOnReddit")
-      print("RedditSessions")
-      print("RedditMasterClasses")
-      print("TheArtistStudio")
-      print("GlamourSchool")
-      print("TheYouShow")
-      print("RedditIntheKitchen")
-      print("whereintheworld")
-      print("TheGamerLounge")
-      print("talentShow")
-      print("distantsocializing")
-      print("\nThis list was last updated March 28, 2020.")
+      url = "https://pastebin.com/raw/rgsZYPkC"
+      r = requests.get(url)
+      content = r.text
+      Dict = eval(content)
+      for key,val in Dict.items():
+        print("")
+        print(key + " - " + val)
+      print("The list and database get updated whenever they add new subreddits and I have the time to add them.")
       continue
     
     elif subset == "thegamerlounge":
@@ -108,7 +103,12 @@ while True:
           continue
   except:
     sys.exit()
-  if subset not in ["pan", "animalsonreddit", "redditmasterclasses", "GlamourSchool", "whereintheworld", "distantsocializing", "redditinthekitchen", "redditsessions", "talentshow", "theartiststudio", "thegamerlounge", "theyoushow"]:
+
+  url = "https://pastebin.com/raw/6D92xhca"
+  r = requests.get(url)
+  content = r.text
+  
+  if subset not in str([content]):
     print("")
     subnotfound = input("The subreddit you just typed in couldn't be found in this script's database.\nType yes to move on with " + subreddit + " or type no if you made a mistake.\n")
     snf = subnotfound.lower()
