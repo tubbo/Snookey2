@@ -47,7 +47,10 @@ Make sure the python requests module is installed for the script to work:
 ```
 pip install requests
 ```
-
+and then do:
+```
+pip install pytz
+```
 ## Installation
 Clicking the Releases tab and downloading the latest version   
 **OR**    
