@@ -1,5 +1,4 @@
 import sys
-import praw
 import pytz
 import time
 import datetime
@@ -7,7 +6,7 @@ import requests
 import webbrowser
 from pytz import timezone
 
-print("Welcome to Snookey2 v2.0 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
+print("Welcome to Snookey2 v2.1 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
 print("Contact me or Spikeedoo for help! My Discord is Drift#5339.\n")
 print("Remember to follow the Reddit TOS and Broadcasting Guidelines here: https://www.redditinc.com/policies/broadcasting-content-policy\n")
 print("The app icon is the official logo to RPAN so credit to Reddit for the logo.\n")
