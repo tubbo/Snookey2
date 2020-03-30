@@ -27,7 +27,7 @@ Added:
 
 The text and stuff below was originally made by u/Spikeedoo (with some modifications from me):
 
-# SnooKey
+# SnooKey2
 Some reddit users figured out a way to stream to RPAN (Reddit's livestreaming platform) from desktop streaming software 
 (like OBS).  Project SnooKey is my attempt at making this possibilty more accessible to RPAN users.
 
