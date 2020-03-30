@@ -25,6 +25,8 @@ Added:
 
 [Original Snookey by u/Spikeedoo is here.](https://github.com/Spikeedoo/SnooKey)   
 
+[Video Tutorial on how to download and use Snookey2 is here](https://youtu.be/Oi54fiFOoCI)
+
 The text and stuff below was originally made by u/Spikeedoo (with some modifications from me):
 
 # SnooKey2
