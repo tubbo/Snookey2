@@ -1,6 +1,6 @@
 
 ### IMPORTANT:  
-### This application is not a virus and will not gain access or harm your computer, Reddit account, or anything else. Snookey2 is completely open source so you can check the .py file for all the code and see that there's nothing harmful. None of this data is stored, because I don't even know how to do that. Thank you for understanding, and have fun streaming! 
+### This application is not a virus and will not gain access or harm your computer, Reddit account, or anything else. Snookey2 is completely open source so you can check the .py file for all the code and see that there's nothing harmful. None of this data is stored, because I don't even know how to do that. I wouldn't even do it anyways if I knew how cause that would be really evil and ruin my reputation forever... Anyways, thank you for understanding, and have fun streaming! 
 
 Hi!
 
