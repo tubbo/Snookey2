@@ -1,6 +1,6 @@
 
 ### IMPORTANT:  
-### Apparently Snookey2 is too big to upload onto the main page of the Snookey2 GitHub, so go download it from the "Releases" tab from now on. Thank you for understanding!
+### This application is not a virus and will not gain access or harm your computer, Reddit account, or anything else. Snookey2 is completely open source so you can check the .py file for all the code and see that there's nothing harmful. None of this data is stored, because I don't even know how to do that. Thank you for understanding, and have fun streaming! 
 
 Hi!
 
@@ -40,7 +40,7 @@ Some reddit users figured out a way to stream to RPAN (Reddit's livestreaming pl
 
 ## START HERE
 ### Method 1 (Windows only)
-If you have a Windows machine, you can run SnooKey without installing python by simply going into the Releases tab and downloading the latest version, unzipping the zip file, and running Snookey.
+If you have a Windows machine, you can run SnooKey without installing python by simply going into the Releases tab and downloading the latest version, and running Snookey.
 
 ### Method 2 (All platforms)
 For this to work you will need Python3 installed to your system.      
