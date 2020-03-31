@@ -4,11 +4,7 @@
 
 Hi!
 
-This application might bring up Windows SmartScreen and I have no way to avoid that.
-
-This app will not harm your computer or give me access to your Reddit account.
-
-You can look at the Python file if your unsure about this as there's nothing bad in the program. I promise you.
+This application might bring up Windows SmartScreen and I have no way to avoid that, like the notice says above there's nothing bad in this program. I use this program myself and many other Redditors do without issues.
 
 This application was made by u/Spikeedoo and was updated by u/IOnlyPlayAsDrif!
 
