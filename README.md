@@ -10,7 +10,7 @@ This application was made by u/Spikeedoo and was updated by u/IOnlyPlayAsDrif!
 
 App icon was made by Reddit.
 
-Contact me at Drift#5339 for help or contact our Reddit usernames!
+[Join the Unofficial RPAN Discord Server for Snookey2 Support/Reporting Bugs/Suggestions/and just talking to other streamers/viewers!](https://discord.gg/3GcApfT)
 
 Thank you for downloading Snookey!
 
