@@ -5,8 +5,21 @@ import datetime
 import requests
 import webbrowser
 from pytz import timezone
+from pypresence import Presence
+from PySide2 import QtWidgets, QtGui
 
-print("Welcome to Snookey2 v2.1 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
+print("Connecting to Discord for Rich Presence...\n")
+
+try:
+  client_id = "694286426338099250"
+  RPC = Presence(client_id)
+  RPC.connect()
+  RPC.update(state="Setting up RPAN stream...", large_image="icon", large_text="Made by u/IOnlyPlayAsDrif", start=int(time.time()))
+except:
+  print("Failed to connect to Discord, restart the program or try again later to get Rich Presence!")
+
+print("Welcome to Snookey2 v2.2 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
+print("Now with NEW Discord Rich Presence!\n")
 print("Contact me or Spikeedoo for help! My Discord is Drift#5339.\n")
 print("Remember to follow the Reddit TOS and Broadcasting Guidelines here: https://www.redditinc.com/policies/broadcasting-content-policy\n")
 print("The app icon is the official logo to RPAN so credit to Reddit for the logo.\n")
@@ -168,6 +181,8 @@ headers = {
   'Authorization': full_token
 }
 
+count = 0
+
 # Request broadcast slot
 while True:
   token_req = requests.request("POST", url=broadcast_endpoint, headers=headers, data=payload)
@@ -175,6 +190,7 @@ while True:
   if token_req.status_code == 200:
     # Success!  Stream prepped
     response = token_req.json()
+    RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif", start=int(time.time()))
     print("")
     print("Server Link: rtmp://ingest.redd.it/inbound/")
     print("Your Stream Key: " + response["data"]["streamer_key"])
@@ -184,8 +200,13 @@ while True:
     print("This program will close in 1 minute.")
     time.sleep(60)
     sys.exit()
+
+  
   else:
     # Failed
+    if count == 0:
+      RPC.update(state="Trying to stream on RPAN...", details="Attempting to stream to r/" + subset + "...", start=int(time.time()), large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
+      count += 1
     print("")
     print("Stream failed to connect! Trying again in 2 seconds...")
     try:
