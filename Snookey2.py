@@ -103,8 +103,8 @@ while True:
       date = datetime.datetime.now(tz=pytz.utc)
       date = date.astimezone(timezone('US/Pacific'))
       
-      if datetime.datetime.utcnow().strftime("%A") == "Thursday":
-        if date.strftime(date_format) < 17:
+      if datetime.datetime.utcnow().strftime("%A") == "Wednesday":
+        if date.strftime(date_format) < 17 and date.strftime(date_format) > 1:
           print("PAN - The OG subreddit for all livestreams on Wednesday's from Midnight to 5PM PST!")
         else:
           pass
@@ -161,9 +161,9 @@ while True:
   
   else:
     if subset == "pan":
-      if datetime.datetime.utcnow().strftime("%A") == "Thursday":
+      if datetime.datetime.utcnow().strftime("%A") == "Wedneday":
         break
-        if datetime.datetime.utcnow().hour < 17:
+        if date.strftime(date_format) < 17 and date.strftime(date_format) > 1:
           break
         else:
           print("")
@@ -201,7 +201,7 @@ while True:
     print("DON'T share your Stream Key with anyone.")
     print("You can put these into your OBS Settings by going to the Stream section of the settings and switching Service to Custom...")
     print("YOU ARE LIVE: " + response["data"]["post"]["outboundLink"]["url"])
-    print("This program will close in about an hour.\nIf you close this application, Snookey2 will disconnect from Discord.\nSo if you want to keep Discord Rich Presence, just minimize this window.\nThanks for understanding!\n")
+    print("\nThis program will close in about an hour.\nIf you close this application, Snookey2 will disconnect from Discord.\nSo if you want to keep Discord Rich Presence, just minimize this window.\nThanks for understanding!\n")
     time.sleep(180)
     RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif", start=int(time.time()))
     time.sleep(3600)
