@@ -19,6 +19,7 @@ Contact me at Drift#5339 for help or contact our Reddit usernames!
 Thank you for downloading Snookey!
 
 Added:
+- Discord Rich Presence
 - More text in general
 - More descriptive and better looking text
 - Auto closes when getting a stream spot is successful after 1 minute
