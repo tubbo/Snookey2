@@ -1,4 +1,4 @@
-#PLEASE READ:  
+## PLEASE READ:  
 Apparently Snookey2 is too big to upload onto the main page of the Snookey2 GitHub, so go download it from the "Releases" tab from now on. Thank you for understanding!
 
 Hi!
