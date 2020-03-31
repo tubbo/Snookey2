@@ -1,3 +1,6 @@
+#PLEASE READ:  
+Apparently Snookey2 is too big to upload onto the main page of the Snookey2 GitHub, so go download it from the "Releases" tab from now on. Thank you for understanding!
+
 Hi!
 
 This application might bring up Windows SmartScreen and I have no way to avoid that.
@@ -47,16 +50,16 @@ Make sure the python requests module is installed for the script to work:
 ```
 pip install requests
 ```
-and then do:
 ```
 pip install pytz
 ```
+```
+pip install pypresence
+'''
 ## Installation
-Clicking the Releases tab and downloading the latest version   
-**OR**    
-Download the zip file by pressing the green 'Clone or download' button and selecting 'Download ZIP'
+Just click on the Releases tab and download the latest version.
 
-## Using SnooKey
+## Using SnooKey2
 Once you have SnooKey downloaded, it is time to run the script.     
 (**If you have a Windows computer (Method #1) simply run ```snookey2_v(version number).exe```**)
 ```
