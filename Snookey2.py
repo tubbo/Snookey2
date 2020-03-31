@@ -55,32 +55,38 @@ while True:
         webbrowser.open("https://discord.gg/NDfcVkP", new=0)
         continue
     elif len(user_token) < 40:
-      print("")
-      ays = input("This access token is in a different format, or you copy and pasted it wrong.\nAre you sure this is correct? Type yes or no to answer:\n")
-      if ays.lower() == "yes":
+      if len(user_token) < 36:
         print("")
-        break
-      if ays.lower() == "no":
-        print("")
-        continue
+        ays = input("This access token is in a different format, or you copy and pasted it wrong.\nAre you sure this is correct? Type yes or no to answer:\n")
+        if ays.lower() == "yes":
+          print("")
+          break
+        if ays.lower() == "no":
+          print("")
+          continue
+        else:
+          print("")
+          print("Invalid response inputted. Please try again.")
+          print("")
+          continue
       else:
-        print("")
-        print("Invalid response inputted. Please try again.")
-        print("")
-        continue
-    elif user_token[0:12].isdigit() == False:
-      print("")
-      ays = input("This access token is in a different format, or you copy and pasted it wrong.\nAre you sure this is correct? Type yes or no to answer:\n")
-      if ays.lower() == "yes":
         break
-      if ays.lower() == "no":
+    elif user_token[0:8].isdigit() is False:
+      if user_token[0:12].isdigit() is False:
         print("")
-        continue
+        ays = input("This access token is in a different format, or you copy and pasted it wrong.\nAre you sure this is correct? Type yes or no to answer:\n")
+        if ays.lower() == "yes":
+          break
+        if ays.lower() == "no":
+          print("")
+          continue
+        else:
+          print("")
+          print("Invalid response inputted. Please try again.")
+          print("")
+          continue
       else:
-        print("")
-        print("Invalid response inputted. Please try again.")
-        print("")
-        continue
+        break
   except:
     print("Unexpected error occured, closing program in 10 seconds...")
     time.sleep(10)
