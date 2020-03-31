@@ -1,3 +1,4 @@
+import os
 import sys
 import pytz
 import time
@@ -6,7 +7,7 @@ import requests
 import webbrowser
 from pytz import timezone
 from pypresence import Presence
-
+  
 print("Connecting to Discord for Rich Presence...\n")
 
 try:
@@ -17,12 +18,12 @@ try:
 except:
   print("Failed to connect to Discord, restart the program or try again later to get Rich Presence!")
 
-print("Welcome to Snookey2 v2.2 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
+print("Welcome to Snookey2 v2.3 made by u/Spikeedoo and modified by u/IOnlyPlayAsDrif!\n")
 print("Now with NEW Discord Rich Presence!\n")
-print("Contact me or Spikeedoo for help! My Discord is Drift#5339.\n")
 print("Remember to follow the Reddit TOS and Broadcasting Guidelines here: https://www.redditinc.com/policies/broadcasting-content-policy\n")
 print("The app icon is the official logo to RPAN so credit to Reddit for the logo.\n")
-print("If you find any bugs or errors in Snookey2, please contact me at u/IOnlyPlayAsDrif or on Discord at Drift#5339!\n")
+print("Join the RPAN Discord Server if you need help with Snookey2, or just want to chat with other streamers/viewers!\nhttps://discord.gg/NDfcVkP\n")
+
 
 # 'Reddit for Android' Client ID
 client_id = "ohXpoqrZYub1kg"
@@ -39,7 +40,7 @@ webbrowser.open(request_url, new=0)
 print("The access code can be found after you click Accept and in the URL after it's done loading after the part that says access_token, but DON'T include the = or &.\n")
 while True:
   try:
-    user_token = input("Please enter your access token:\nType tutorial for a video tutorial on how to use Snookey!\nType reopen in the field to reopen the webpage if you closed it/didn't load up.\n")
+    user_token = input("Please enter your access token:\nType tutorial for a video tutorial on how to use Snookey!\nType reopen in the field to reopen the webpage if you closed it/didn't load up.\nType discord in the prompt to join the Unoffical RPAN Server for chatting with other streamers and Snookey2 support/bug reports/suggestions!\n")
     options = user_token.lower()
     if options == "tutorial":
       print("")
@@ -49,6 +50,10 @@ while True:
       print("")
       webbrowser.open(request_url, new=0)
       continue
+    elif options == "discord":
+        print("")
+        webbrowser.open("https://discord.gg/NDfcVkP", new=0)
+        continue
     elif len(user_token) < 40:
       print("")
       ays = input("This access token is in a different format, or you copy and pasted it wrong.\nAre you sure this is correct? Type yes or no to answer:\n")
@@ -189,15 +194,17 @@ while True:
   if token_req.status_code == 200:
     # Success!  Stream prepped
     response = token_req.json()
-    RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif", start=int(time.time()))
+    RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
     print("")
     print("Server Link: rtmp://ingest.redd.it/inbound/")
     print("Your Stream Key: " + response["data"]["streamer_key"])
     print("DON'T share your Stream Key with anyone.")
     print("You can put these into your OBS Settings by going to the Stream section of the settings and switching Service to Custom...")
     print("YOU ARE LIVE: " + response["data"]["post"]["outboundLink"]["url"])
-    print("This program will close in 1 minute.")
-    time.sleep(60)
+    print("This program will close in about an hour.\nIf you close this application, Snookey2 will disconnect from Discord.\nSo if you want to keep Discord Rich Presence, just minimize this window.\nThanks for understanding!\n")
+    time.sleep(180)
+    RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif", start=int(time.time()))
+    time.sleep(3600)
     sys.exit()
 
   
