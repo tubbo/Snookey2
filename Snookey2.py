@@ -199,7 +199,10 @@ while True:
   if token_req.status_code == 200:
     # Success!  Stream prepped
     response = token_req.json()
-    RPC.update(state="Streaming " + title + " on r/" + subset "!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
+    try:
+      RPC.update(state="Streaming " + title + " on r/" + subset + "!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
+    except:
+      print("Failed to connect to Discord, restart the program or try again later to get Rich Presence!")
     print("")
     print("Server Link: rtmp://ingest.redd.it/inbound/")
     print("Your Stream Key: " + response["data"]["streamer_key"])
@@ -216,8 +219,11 @@ while True:
   else:
     # Failed
     if count == 0:
-      RPC.update(state="Trying to stream on RPAN...", details="Attempting to stream to r/" + subset + "...", start=int(time.time()), large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
-      count += 1
+      try:
+        RPC.update(state="Trying to stream on RPAN...", details="Attempting to stream to r/" + subset + "...", start=int(time.time()), large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
+        count += 1
+      except:
+        print("Failed to connect to Discord, restart the program or try again later to get Rich Presence!")
     print("")
     print("Stream failed to connect! Trying again in 2 seconds...")
     try:
