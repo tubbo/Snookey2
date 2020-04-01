@@ -1,4 +1,3 @@
-import os
 import sys
 import pytz
 import time
@@ -173,11 +172,11 @@ while True:
           break
         else:
           print("")
-          print("RPAN is available on Wednesdays from Midnight-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
+          print("RPAN is available on Wednesdays from 1AM-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
           continue
       else:
         print("")
-        print("RPAN is available on Wednesdays from Midnight-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
+        print("RPAN is available on Wednesdays from 1AM-5PM PST (times might change).\nPlease pick another subreddit to stream to.")
         continue
     break
   
@@ -200,7 +199,7 @@ while True:
   if token_req.status_code == 200:
     # Success!  Stream prepped
     response = token_req.json()
-    RPC.update(state="Streaming on r/" + subset + " on RPAN!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
+    RPC.update(state="Streaming " + title + " on r/" + subset "!", details=response["data"]["post"]["outboundLink"]["url"], large_image="icon", large_text="Made by u/IOnlyPlayAsDrif")
     print("")
     print("Server Link: rtmp://ingest.redd.it/inbound/")
     print("Your Stream Key: " + response["data"]["streamer_key"])
