@@ -44,16 +44,10 @@ For this to work you will need Python3 installed to your system.
 [Install Python for Windows](https://realpython.com/installing-python/#windows)   
 [Install Python for Linux](https://realpython.com/installing-python/#linux)   
 [Install Python for OS X](https://realpython.com/installing-python/#macos-mac-os-x)   
-Make sure the python requests module is installed for the script to work:
+Make sure the dependent Python modules are installed for the script to work:
 ```
-pip install requests
+pip install requests pytz pypresence
 ```
-```
-pip install pytz
-```
-```
-pip install pypresence
-'''
 ## Installation
 Just click on the Releases tab and download the latest version.
 
